@@ -5,8 +5,6 @@ initDuration <- new("duration",find=0, delete=0, update=0)
 initMedDuration <- new("medDuration",findMed=0, deleteMed=0, updateMed=0, find=list(), delete=list(), update=list())
 dataToProcess <- read.csv(file = 'data.csv', header = TRUE)
 
-initDuration@find = 1
-
 maxReducer <- function(acc, idx) {
   duration = strtoi(dataToProcess[idx, 3]) - strtoi(dataToProcess[idx, 2])
   if (duration > slot(acc, dataToProcess[idx, 1])) {
