@@ -29,9 +29,7 @@ please output the Max, Min, Mean and Median duration for each operation type usi
 
 # Result
 
-I had differents problems on the exercice:
+I had a problems on the exercice:
 
-* If I don't put print() function on the reducers, the program crash.
-
-* The Reduce function iterate elems by colums and not by rows. So I use a workaround in using index than elem object.
+* The Reduce function iterate data frame or matrix by colums and not by rows. So I needed to use a workaround in using a list of index than list of elem.
 Code is less clear unfortunatly

@@ -10,7 +10,7 @@ maxReducer <- function(acc, idx) {
   if (duration > slot(acc, dataToProcess[idx, 1])) {
     slot(acc, dataToProcess[idx, 1]) = duration
   }
-  print(acc)
+  return(acc)
 }
 
 minReducer <- function(acc, idx) {
@@ -18,7 +18,7 @@ minReducer <- function(acc, idx) {
   if (duration < slot(acc, dataToProcess[idx, 1]) || slot(acc, dataToProcess[idx, 1]) == 0) {
     slot(acc, dataToProcess[idx, 1]) = duration
   }
-  print(acc)
+  return(acc)
 }
 meanReducer <- function(acc, idx) {
   duration = strtoi(dataToProcess[idx, 3]) - strtoi(dataToProcess[idx, 2])
@@ -28,7 +28,7 @@ meanReducer <- function(acc, idx) {
     acc@delete = acc@delete / sum(dataToProcess$operationtype == "delete")
     acc@update = acc@update / sum(dataToProcess$operationtype == "update")
   }
-  print(acc)
+  return(acc)
 }
 medReducer <- function(acc, idx) {
   duration = strtoi(dataToProcess[idx, 3]) - strtoi(dataToProcess[idx, 2])
@@ -38,7 +38,7 @@ medReducer <- function(acc, idx) {
     acc@deleteMed = median(sort(unlist(acc@delete)))
     acc@updateMed = median(sort(unlist(acc@update)))
   }
-  print(acc)
+  return(acc)
 }
 
 print("======================= MAX DURATION =======================================")
