@@ -31,4 +31,4 @@ please output the Max, Min, Mean and Median duration for each operation type usi
 
 If I don't put print() function on the reducers, the program crash.
 
-Very courius
+Very curius
