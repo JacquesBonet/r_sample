@@ -33,5 +33,5 @@ I had differents problems on the exercice:
 
 * If I don't put print() function on the reducers, the program crash.
 
-* The Reduce function iterate elems by colums and not by rows. So I use a workaround in using index then elem object.
+* The Reduce function iterate elems by colums and not by rows. So I use a workaround in using index than elem object.
 Code is less clear unfortunatly
